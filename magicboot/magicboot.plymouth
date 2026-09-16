@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Magic Boot
+Description=MagicOS Pack.
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/magicboot
+ScriptFile=/usr/share/plymouth/themes/magicboot/magicboot.script

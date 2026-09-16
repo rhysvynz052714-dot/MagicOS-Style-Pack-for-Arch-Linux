@@ -1,0 +1,28 @@
+# Load the background image
+bg_image = Image("background.png");
+
+# Get screen properties
+screen_width = Window.GetWidth();
+screen_height = Window.GetHeight();
+image_width = bg_image.GetWidth();
+image_height = bg_image.GetHeight();
+
+# Calculate aspect ratios
+screen_ratio = screen_width / screen_height;
+image_ratio = image_width / image_height;
+
+# Determine scale factor to fill the screen without stretching (Aspect Fill)
+if (screen_ratio > image_ratio) {
+    scale_factor = screen_width / image_width;
+} else {
+    scale_factor = screen_height / image_height;
+}
+
+# Apply scaling safely
+scaled_bg_image = bg_image.Scale(image_width * scale_factor, image_height * scale_factor);
+
+# Place the background sprite exactly in the center
+bg_sprite = Sprite(scaled_bg_image);
+bg_sprite.SetX((screen_width - scaled_bg_image.GetWidth()) / 2);
+bg_sprite.SetY((screen_height - scaled_bg_image.GetHeight()) / 2);
+bg_sprite.SetZ(-100); # Ensure it stays in the background
