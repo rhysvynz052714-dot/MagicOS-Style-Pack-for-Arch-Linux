@@ -16,6 +16,7 @@ cd MagicOS-Style-Pack-for-Arch-Linux
 Step 3
 
 Installer GUI
+
 sudo python3 install.py
 
 Installer Minimal
