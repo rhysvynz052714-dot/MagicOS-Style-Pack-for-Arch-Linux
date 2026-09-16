@@ -19,6 +19,7 @@ Installer GUI
 sudo python3 install.py
 
 Installer Minimal
+
 chmod +x install.sh
 
 sudo install.sh
